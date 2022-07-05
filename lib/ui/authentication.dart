@@ -10,8 +10,8 @@ class Authentication extends StatefulWidget {
 }
 
 class _AuthenticationState extends State<Authentication> {
-  TextEditingController _emailField = TextEditingController();
-  TextEditingController _passwordField = TextEditingController();
+  final _emailField = TextEditingController();
+  final _passwordField = TextEditingController();
 
   @override
   Widget build(BuildContext context) {
@@ -23,7 +23,7 @@ class _AuthenticationState extends State<Authentication> {
           color: Colors.blueAccent,
         ),
         child: Column(
-          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+          mainAxisAlignment: MainAxisAlignment.center,
           children: [
             SizedBox(
               width: MediaQuery.of(context).size.width / 1.3,
@@ -42,6 +42,9 @@ class _AuthenticationState extends State<Authentication> {
               ),
             ),
             SizedBox(
+              height: MediaQuery.of(context).size.height / 35,
+            ),
+            SizedBox(
               width: MediaQuery.of(context).size.width / 1.3,
               child: TextFormField(
                 style: const TextStyle(color: Colors.white),
@@ -57,6 +60,9 @@ class _AuthenticationState extends State<Authentication> {
                       color: Colors.white,
                     )),
               ),
+            ),
+            SizedBox(
+              height: MediaQuery.of(context).size.height / 35,
             ),
             Container(
               width: MediaQuery.of(context).size.width / 1.4,
@@ -81,6 +87,9 @@ class _AuthenticationState extends State<Authentication> {
                 },
                 child: const Text("Register"),
               ),
+            ),
+            SizedBox(
+              height: MediaQuery.of(context).size.height / 35,
             ),
             Container(
               width: MediaQuery.of(context).size.width / 1.4,
