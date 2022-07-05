@@ -25,30 +25,38 @@ class _AuthenticationState extends State<Authentication> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: [
-            TextFormField(
-              controller: _emailField,
-              decoration: const InputDecoration(
-                  hintText: "something@email.com",
-                  hintStyle: TextStyle(
-                    color: Colors.white,
-                  ),
-                  labelText: "Email",
-                  labelStyle: TextStyle(
-                    color: Colors.white,
-                  )),
+            SizedBox(
+              width: MediaQuery.of(context).size.width / 1.3,
+              child: TextFormField(
+                style: const TextStyle(color: Colors.white),
+                controller: _emailField,
+                decoration: const InputDecoration(
+                    hintText: "something@email.com",
+                    hintStyle: TextStyle(
+                      color: Colors.white,
+                    ),
+                    labelText: "Email",
+                    labelStyle: TextStyle(
+                      color: Colors.white,
+                    )),
+              ),
             ),
-            TextFormField(
-              controller: _passwordField,
-              obscureText: true,
-              decoration: const InputDecoration(
-                  hintText: "password",
-                  hintStyle: TextStyle(
-                    color: Colors.white,
-                  ),
-                  labelText: "Password",
-                  labelStyle: TextStyle(
-                    color: Colors.white,
-                  )),
+            SizedBox(
+              width: MediaQuery.of(context).size.width / 1.3,
+              child: TextFormField(
+                style: const TextStyle(color: Colors.white),
+                controller: _passwordField,
+                obscureText: true,
+                decoration: const InputDecoration(
+                    hintText: "password",
+                    hintStyle: TextStyle(
+                      color: Colors.white,
+                    ),
+                    labelText: "Password",
+                    labelStyle: TextStyle(
+                      color: Colors.white,
+                    )),
+              ),
             ),
             Container(
               width: MediaQuery.of(context).size.width / 1.4,
