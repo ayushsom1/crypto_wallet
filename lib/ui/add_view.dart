@@ -1,10 +1,10 @@
-import 'dart:js_util';
+// import 'dart:js_util';
 
 import 'package:crypto_wallet/net/flutterfire.dart';
-import 'package:flutter/cupertino.dart';
+// import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/src/widgets/container.dart';
-import 'package:flutter/src/widgets/framework.dart';
+// import 'package:flutter/src/widgets/container.dart';
+// import 'package:flutter/src/widgets/framework.dart';
 
 class AddView extends StatefulWidget {
   const AddView({super.key});
@@ -46,7 +46,7 @@ class _AddViewState extends State<AddView> {
             child: TextFormField(
               controller: _amountController,
               decoration: const InputDecoration(
-                labelText: "Coin Amouont",
+                labelText: "Coin Amount",
               ),
             ),
           ),
@@ -63,6 +63,7 @@ class _AddViewState extends State<AddView> {
             child: MaterialButton(
               onPressed: () async {
                 await addCoin(dropDownValue, _amountController.text);
+                // ignore: use_build_context_synchronously
                 Navigator.of(context).pop();
               },
               child: const Text("Add"),
